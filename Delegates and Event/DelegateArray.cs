@@ -8,7 +8,7 @@ namespace Delegates_and_Event
 {
     public class DelegateArray
     {
-        public delegate void operation(int x,int y);
+        public delegate void operation( int x,int y );
 
         public static void DelegateImplement()
         {
