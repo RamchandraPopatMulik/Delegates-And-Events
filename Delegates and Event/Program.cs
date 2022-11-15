@@ -1,11 +1,17 @@
 ﻿namespace Delegates_and_Event
 {
-    internal class Program
+    public class Program
     {
+        public static event DelEventHandler Del;
         static void Main(string[] args)
         {
+
+            //DelegateArray.DelegateImplement();
             
-            DelegateArray.DelegateImplement();
+            Del +=new DelEventHandler(Event.Ramchandra);
+            Del += new DelEventHandler(Event.Shrikant);
+            Del += new DelEventHandler(Event.Mahesh);
+            Del.Invoke();
         }
     }
 }
