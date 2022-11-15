@@ -12,19 +12,16 @@ namespace Delegates_and_Event
 
         public static void DelegateImplement()
         {
-            operation[] obj =
-            {
-                new operation(Delegates.Addition),
-                new operation(Delegates.Substarction),
-                new operation(Delegates.Multiplication),
-            };
-            for(int i=0;i<obj.Length;i++)
-            {
-                obj[i](10,20);
-                obj[i](20,10);
-                obj[i](30,20);
-                Console.WriteLine();
-            }
+            operation obj = Delegates.Addition;
+            obj+=Delegates.Substarction;
+            obj += Delegates.Multiplication;
+
+            obj(10,30);
+            Console.WriteLine();
+            obj(20,10);
+            Console.WriteLine();
+            obj(30,20);
+            Console.WriteLine();
         }
     }
 }
